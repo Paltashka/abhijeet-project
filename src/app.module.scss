@@ -1,0 +1,15 @@
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+.app {
+  display: grid;
+
+  grid-template-columns: 300px 1fr;
+
+  min-height: 100vh;
+}
+
+.content {
+  background-color: #F5F5FA;
+}

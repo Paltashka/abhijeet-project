@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+
+import { Navbar } from './components/layout';
+
+import { navbarItems } from './app.constants';
+
+import styles from './app.module.scss';
 
 function App() {
+
+  useEffect(() => {
+    localStorage.setItem('activeItem', '0');
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.app}>
+      <Navbar items={navbarItems} activeItem={+(localStorage.getItem('activeItem') || 0)} />
+
+      <div className={styles.content}>
+
+      </div>
     </div>
   );
 }

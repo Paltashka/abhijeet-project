@@ -1,0 +1,19 @@
+@import './../../../colors.scss';
+
+.list_item {
+  padding: 13px 0;
+
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  
+  color: $primary;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  p {
+    padding-left: 36px;
+  }
+}
