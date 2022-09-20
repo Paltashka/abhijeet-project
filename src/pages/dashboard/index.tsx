@@ -1,11 +1,9 @@
 import { FC } from "react";
 
-import { Navbar } from "../../components";
-
-const DashboarPage: FC = () => {
-
+export const DashboarPage: FC = () => {
   return (
     <main>
+      <h1>Dashboard</h1>
     </main>
   )
 }

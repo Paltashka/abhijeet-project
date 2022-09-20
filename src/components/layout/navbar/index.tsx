@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 
 import { NavbarItem, NavBarItemOptions } from "../../ui";
 
@@ -9,12 +9,20 @@ interface NavbarProps {
   activeItem: number;
 }
 
-export const Navbar: FC<NavbarProps> = ({ items, activeItem }) => (
-  <nav className={styles.navbar__container}>
-    <ul className={styles.navbar__list}>
-      {items.map((item, index) => (
-        <NavbarItem key={item.label} {...item} isActive={activeItem === index} />
-      ))}
-    </ul>
-  </nav>
-)
+export const Navbar: FC<NavbarProps> = ({ items }) => {
+  const [activeItem, setActiveItem] = useState(0);
+
+  return (
+    <nav className={styles.navbar__container}>
+      <ul className={styles.navbar__list}>
+        {items.map((item, index) => (
+          <NavbarItem
+            key={item.label} {...item}
+            isActive={index === activeItem}
+            onClick={() => setActiveItem(index)}
+          />
+        ))}
+      </ul>
+    </nav>
+  )
+};

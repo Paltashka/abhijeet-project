@@ -1,6 +1,11 @@
 .navbar {
   &__container {
     background-color: #ffffff;
+    
+    ul {
+      margin: 0;
+      padding: 0;
+    }
   }
 
   &__list {

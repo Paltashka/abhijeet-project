@@ -9,11 +9,13 @@
   
   color: $primary;
 
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
   p {
-    padding-left: 36px;
+    padding-left: 108px;
+  }
+
+  &__active {
+    color: #ffffff;
+
+    background-color: $primary;
   }
 }
