@@ -1,4 +1,5 @@
 import { FC, useState } from "react";
+import HeaderContext from "../../../context/header.context";
 
 import { NavbarItem, NavBarItemOptions } from "../../ui";
 
@@ -12,6 +13,8 @@ interface NavbarProps {
 export const Navbar: FC<NavbarProps> = ({ items }) => {
   const [activeItem, setActiveItem] = useState(0);
 
+  const { setData } = HeaderContext.useContext();
+
   return (
     <nav className={styles.navbar__container}>
       <ul className={styles.navbar__list}>
@@ -19,7 +22,11 @@ export const Navbar: FC<NavbarProps> = ({ items }) => {
           <NavbarItem
             key={item.label} {...item}
             isActive={index === activeItem}
-            onClick={() => setActiveItem(index)}
+            onClick={() => {
+              setActiveItem(index);
+
+              setData({ title: item.label });
+            }}
           />
         ))}
       </ul>

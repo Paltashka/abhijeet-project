@@ -1,0 +1,11 @@
+.dashboard {
+  padding: 32px;
+}
+
+.statistics {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+}

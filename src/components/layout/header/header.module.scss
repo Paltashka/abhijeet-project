@@ -1,0 +1,67 @@
+.header {
+
+  margin: 0;
+  padding: 33px 55px;
+  background-color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    padding: 0;
+    margin: 0;
+
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+
+    &__wrapper {
+      margin-right: 34px;
+
+      cursor: pointer;
+    }
+  }
+
+  &__profile {
+    display: flex;
+
+    align-items: center;
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      margin-left: 10px;
+
+      p {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+      }
+
+      &__name {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      &__role {
+        font-weight: 300;
+        font-size: 9.5px;
+        line-height: 11px;
+      }
+    }
+  }
+
+}

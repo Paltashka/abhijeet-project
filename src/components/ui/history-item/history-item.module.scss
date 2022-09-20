@@ -1,0 +1,68 @@
+.item {
+  padding: 16px;
+
+  background-color: #fff;
+
+  border-radius: 14px;
+
+  &__image {
+    width: 100%;
+  }
+
+  &__text {
+    margin-top: 14px;
+
+    &_title {
+      margin: 0;
+
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &_distance {
+      margin: 0;
+
+      color: #9A9EA7;
+
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+  }
+
+  &__descrition {
+    margin: 15px 0 24px 0;
+
+    color: #9A9EA7;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+  } 
+
+  &__footer {
+    button {
+      padding: 9px 30px;
+      margin-right: 8px;
+
+      cursor: pointer;
+
+      border: none;
+      border-radius: 8px;
+
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 18px;
+
+      background-color: #F5F6F7;
+      color: #9A9EA7;
+
+      &:first-child {
+        background-color: #EDF9FF;
+        color: #000000;
+      }
+    }
+  }
+}
